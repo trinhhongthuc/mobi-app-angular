@@ -1,0 +1,33 @@
+<label [for]="item.id" class="w-full pt-3 pb-3 pl-3 pr-3 cursor-pointer bg-secondColor rounded-[8px] flex items-center">
+  <div class="block w-fit mr-3">
+    <input type="radio" [name]="item.name" [id]="item.id" class="w-4 h-4">
+  </div>
+  <div class="flex justify-between items-center flex-1">
+    <div class="">
+      <h3 class="font-bold text-[22px] block mb-1 leading-7">
+        {{
+        item.title
+        }}
+      </h3>
+      <p class="text-primaryColor font-[300] text-[13px] mb-0" *ngIf="item.discount">
+        {{
+        item.discount
+        }} discount
+      </p>
+    </div>
+
+    <div class="">
+      <h3 class="font-extrabold text-[24px] block mb-1 leading-7">
+        $ {{
+        item.price
+        }}
+      </h3>
+      <p class=" font-[300] text-black mb-0 text-right">
+        {{
+        item.date
+        }}
+      </p>
+    </div>
+  </div>
+
+</label>

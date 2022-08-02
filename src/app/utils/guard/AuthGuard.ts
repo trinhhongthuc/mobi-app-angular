@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from "@angular/core";
 import {
   ActivatedRouteSnapshot,
   CanActivate,
@@ -6,8 +6,8 @@ import {
   Router,
   RouterStateSnapshot,
   UrlTree,
-} from '@angular/router';
-import { Observable } from 'rxjs';
+} from "@angular/router";
+import { Observable } from "rxjs";
 
 @Injectable()
 export class AuthGuardService implements CanActivate, CanActivateChild {
@@ -20,8 +20,8 @@ export class AuthGuardService implements CanActivate, CanActivateChild {
     | UrlTree
     | Observable<boolean | UrlTree>
     | Promise<boolean | UrlTree> {
-    if (!window.localStorage.getItem('user')) {
-      this.router.navigateByUrl('login');
+    if (!window.localStorage.getItem("user")) {
+      this.router.navigateByUrl("login");
     }
     return true;
   }
@@ -33,7 +33,6 @@ export class AuthGuardService implements CanActivate, CanActivateChild {
     | UrlTree
     | Observable<boolean | UrlTree>
     | Promise<boolean | UrlTree> {
-    console.log('CanActive child');
     return true;
   }
 }

@@ -1,0 +1,41 @@
+<div class="container pt-5 pb-5 pl-3 pr-3 bg-shadow-default">
+  <h1 class="font-bold text-[22px] block mb-3">
+    Choose your Subscription plan
+  </h1>
+
+  <p class="text-[14px] font-[300] block mb-3">
+    And get a 7-day free trial
+  </p>
+  <div class="flex flex-col gap-4 mb-3">
+    <app-SubscriptionBox *ngFor="let item of subscriptionPlan" [item]="item"> </app-SubscriptionBox>
+  </div>
+  <div class="p-4 bg-secondColor rounded-[10px] mb-3">
+    <h4 class="font-bold block text-[18px]">
+      You'll get:
+    </h4>
+
+    <div class="flex items-center justify-start mb-3">
+      <img src="../../../assets/images/Star.svg" alt="" class="mr-2">
+      <span class="text-textColor text-[13px]">
+        Unlimited access
+      </span>
+    </div>
+    <div class="flex items-center justify-start mb-3">
+      <img src="../../../assets/images/Star.svg" alt="" class="mr-2">
+      <span class="text-textColor text-[13px]">
+        200GB storage
+      </span>
+    </div>
+    <div class="flex items-center justify-start mb-3">
+      <img src="../../../assets/images/Star.svg" alt="" class="mr-2">
+      <span class="text-textColor text-[13px]">
+        Sync all your devices
+      </span>
+    </div>
+
+
+  </div>
+
+  <button nz-button nzType="primary" type="submit" class="w-full block">Subscribe</button>
+
+</div>

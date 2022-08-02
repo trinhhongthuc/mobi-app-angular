@@ -16,7 +16,7 @@
   </div>
 </div> -->
 
-<div class="container bg-shadow-default">
+<!-- <div class="container bg-shadow-default">
   <div class="pr-3 pl-3 pt-6 pb-6">
     <nz-progress [nzPercent]="30" [nzShowInfo]="false" class="mb-3"></nz-progress>
     <h1 class="font-bold text-[22px] block">
@@ -27,10 +27,14 @@
     </p>
 
     <div class="flex flex-col gap-3 mb-3">
-      <app-CheckBoxInput *ngFor="let item of dataInter" [item]="item"></app-CheckBoxInput>
+      <app-CheckBoxInput *ngFor="let item of dataInter" [item]="item" (chooseItem)="handleActionClick($event)">
+      </app-CheckBoxInput>
     </div>
-
+    <i class="fa-solid fa-user"></i>
+    <span class="fa-solid fa-user"></span>
     <button nz-button nzType="primary" type="submit" (click)="handleSubmit()" class="w-full mb-10 block">Next</button>
   </div>
 
-</div>
+</div> -->
+
+<app-ChooseSubscriptionPlan></app-ChooseSubscriptionPlan>
