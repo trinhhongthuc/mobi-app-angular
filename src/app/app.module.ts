@@ -7,6 +7,7 @@ import { AppComponent } from "./app.component";
 import { HomeComponent } from "./pages/Home/Home.component";
 import { LoginComponent } from "./pages/Login/Login.component";
 import { PageModule } from "./pages/page.module";
+import { SettingComponent } from "./pages/Setting/Setting.component";
 import { AuthGuardService } from "./utils/guard/AuthGuard";
 const routes: Routes = [
   { path: "", pathMatch: "full", redirectTo: "home" },
@@ -18,6 +19,10 @@ const routes: Routes = [
   {
     path: "login",
     component: LoginComponent,
+  },
+  {
+    path: "setting",
+    component: SettingComponent,
   },
 ];
 

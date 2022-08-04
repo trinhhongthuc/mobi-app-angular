@@ -1,0 +1,21 @@
+<div class="p-2 border-b-[1px] border-borderColor border-solid cursor-pointer" (click)="handleClick(item.id)">
+  <div class="bg-white flex justify-between items-center ">
+    <span>
+      {{item.title}}
+    </span>
+
+    <span>
+      <img *ngIf="!active; else showArrow" src="../../../assets/images/right-button.svg" alt="">
+      <ng-template #showArrow>
+        <img src="../../../assets/images/arrowdown.svg" alt="">
+      </ng-template>
+    </span>
+  </div>
+
+  <ul class="ml-4 mt-2" *ngIf="active">
+    <li *ngFor="let item of item.children" class="p-2 border-b-[1px] border-borderColor border-solid">
+      {{item.title}}
+    </li>
+
+  </ul>
+</div>

@@ -32,3 +32,17 @@ export interface SubscriptionPlanType {
   price: string;
   date: string;
 }
+
+export interface MenuItemType {
+  title: string;
+  active: boolean;
+  ref?: string;
+  id: string;
+}
+
+export interface MenuType {
+  title: string;
+  id: string;
+  active: boolean;
+  children: [] | MenuItemType[];
+}

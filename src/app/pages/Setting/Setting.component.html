@@ -1,3 +1,26 @@
-<p>
-  Setting works!
-</p>
+<div class="container bg-shadow-default pt-5 pb-5">
+  <h2 class="font-bold text-[16px] text-center w-full mb-3">
+    Settings
+  </h2>
+
+  <div class="flex flex-col items-center justify-center">
+    <div class="rounded-[12px] mb-3 relative">
+      <img src="../../../assets//images/avatar.svg" alt="">
+      <div
+        class="absolute rounded-full bg-primaryColor w-4 h-4 right-0 bottom-2 flex items-center justify-center cursor-pointer">
+        <img src="../../../assets//images//Edit.svg" class="w-full h-full" alt="">
+      </div>
+    </div>
+    <h3 class="font-bold text-[18px] block mb-1">
+      Trinh Hong Thuc
+    </h3>
+    <p class="text-[13px] font-[300] text-textColor mb-3">
+      @hongThuc
+    </p>
+  </div>
+  <div class="mr-3 ml-3">
+    <app-collapse (ActionClick)="handleAction($event)" *ngFor="let item of MenuSetting" [item]="item"
+      [active]="item.active">
+    </app-collapse>
+  </div>
+</div>
